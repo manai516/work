@@ -17,7 +17,8 @@ public class Main {
         int weight = scanner.nextInt();
         System.out.println("Вес товара (в кг.): " + weight);
 
-        CustomsService.calculateCustoms(price, weight);
+        int customsFee = CustomsService.calculateCustoms(price, weight);
+        System.out.print("Таможенные пошлины составят: " + customsFee);
 
         scanner.close();
     }
